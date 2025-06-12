@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stitch It x BYLD Finance</title>
+  <link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0878/0608/3384/files/byld_logo_square.png">
+  <style>
+    @media (max-width: 1024px) {
+      .byld-flex-wrap { flex-direction: column !important; }
+      .byld-col { width: 100% !important; min-height: auto !important; }
+      .byld-wrapper { height: auto !important; }
+      .co-brand-bar {
+        width: 100% !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        text-align: center;
+        margin-bottom: 16px !important;
+      }
+      .co-brand-bar img { max-height: 40px !important; }
+      .review-block {
+        width: 100% !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+    }
+    .estimator-term-row {
+      padding: 6px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .estimator-term-row:last-child {
+      border-bottom: none;
+    }
+    .review-block {
+      width: 33%;
+      padding: 12px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .review-flex { display: flex; gap: 12px; flex-wrap: nowrap; }
+  </style>
+</head>
+<body style="margin: 0; font-family: sans-serif;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div style="display: flex;">
+      <div class="co-brand-bar" style="width: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 12px; gap: 12px; margin-left: 0;">
+        <img src="https://cdn.shopify.com/s/files/1/0878/0608/3384/files/new_sii_logo_1_1.png?v=1749764932" alt="Stitch It International" style="max-height: 48px; height: auto;">
+        <span style="font-weight: 500; font-size: 0.9rem; color: #444;">With Financing Powered By</span>
+        <img src="https://cdn.shopify.com/s/files/1/0878/0608/3384/files/powered-by-5.webp?v=1749246609" alt="BYLD Finance" style="max-height: 48px; height: auto;">
+      </div>
+    </div>
+  </div>
+
+  <div class="byld-flex-wrap" style="display: flex; flex-wrap: nowrap; gap: 20px; align-items: stretch; max-width: 1100px; margin: 0 auto;">
+    <div class="byld-col" style="width: 50%; display: flex; flex-direction: column;">
+      <div style="background: #f9f9f9; border-radius: 16px; padding: 16px 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
+        <iframe
+          src="https://form.jotform.com/251626486633160"
+          title="Apply for Financing - Stitch It"
+          width="100%"
+          style="min-height: 700px; aspect-ratio: 1 / 1.25; border: none; border-radius: 12px; background: #f9f9f9;"
+          frameborder="0"
+          scrolling="no"
+          allowtransparency="true"
+          allow="geolocation; microphone; camera; fullscreen; payment"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="byld-col byld-wrapper" style="width: 50%; display: flex; flex-direction: column; justify-content: space-between; border-radius: 16px; background: #f9f9f9; box-shadow: 0 2px 6px rgba(0,0,0,0.08); padding: 16px 20px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+          <img src="https://cdn.shopify.com/s/files/1/0878/0608/3384/files/charlie_newest_headshot.png?v=1749240989" alt="Charlie McMinn" style="border-radius: 50%; width: 72px; height: 72px; object-fit: cover;">
+          <div>
+            <h4 style="margin: 0; color: #3f4d4d;">Questions ❓</h4>
+            <p style="margin: 4px 0 8px 0; font-size: 0.95rem;"><strong>Charlie McMinn</strong>, BYLD Finance</p>
+            <a href="mailto:charlie@byldfinance.com" style="text-decoration: none; color: #3f4d4d; font-size: 0.9rem;">📧 charlie@byldfinance.com</a><br>
+            <a href="tel:6129780728" style="text-decoration: none; color: #3f4d4d; font-size: 0.9rem;">📞 612-978-0728</a>
+          </div>
+        </div>
+        <hr style="border: none; border-top: 1px solid #dcdcdc; margin: 0 0 16px 0;">
+        <h4 style="margin-top: 0; color: #3f4d4d;">🧮 Estimate Your Monthly Payment</h4>
+        <label for="equipmentSlider" style="display: block; margin-bottom: 6px; color: #3f4d4d; font-size: 0.9rem;">
+          Equipment Cost: <span id="equipmentValue">$50,000</span>
+        </label>
+        <input type="range" id="equipmentSlider" min="5000" max="250000" step="1000" value="50000" class="estimator-slider" style="width: 100%; margin-bottom: 12px;">
+        <div id="paymentResults" style="color: #3f4d4d; font-size: 0.95rem;"></div>
+        <h5 style="margin-top: 16px; font-size: 0.95rem; color: #3f4d4d;">What Customers Are Saying:</h5>
+        <div id="byld-reviews" class="review-flex" style="min-height: 80px;"></div>
+      </div>
+      <p style="font-size: 0.75rem; color: #6a7a7a; margin: 16px 0 0 0;">
+        *Estimated payments are based on standard lease factors and are for illustration only. Actual terms may vary based on credit.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById('equipmentSlider');
+    const valueLabel = document.getElementById('equipmentValue');
+    const resultsBox = document.getElementById('paymentResults');
+
+    function formatCurrency(val) {
+      return `$${Number(val).toLocaleString()}`;
+    }
+
+    function calculatePayments(equipmentCost) {
+      const leaseFactors = { 36: 0.033, 48: 0.026, 60: 0.022 };
+      let results = '';
+      for (const term in leaseFactors) {
+        const factor = leaseFactors[term];
+        const payment = equipmentCost * factor;
+        results += `
+          <div class="estimator-term-row">
+            <strong>${term} months:</strong> <span>${formatCurrency(payment.toFixed(2))} / month</span>
+          </div>
+        `;
+      }
+      return results;
+    }
+
+    function updateCalculator() {
+      const cost = parseInt(slider.value, 10);
+      valueLabel.textContent = formatCurrency(cost);
+      resultsBox.innerHTML = calculatePayments(cost);
+    }
+
+    slider.addEventListener('input', updateCalculator);
+    updateCalculator();
+
+    const reviews = [
+      { name: "Joey Milligan", text: "Charlie McMinn was great during the whole process. She was patient and helpful." },
+      { name: "Ron Henry", text: "Easy, fast, painless. I cannot tell you how appreciative I am for Charlie and her team." },
+      { name: "Jeremy", text: "Service was fast and easy. Charlie came with a great rate! Super friendly and helpful from start to finish." }
+    ];
+
+    const reviewContainer = document.getElementById("byld-reviews");
+    let autoIndex = 0;
+
+    function renderReviews(index) {
+      const isMobile = window.innerWidth <= 1024;
+      let html = '';
+      const count = isMobile ? 1 : 3;
+      for (let i = 0; i < count; i++) {
+        const r = reviews[(index + i) % reviews.length];
+        html += `
+          <div class="review-block">
+            <p style="margin-bottom: 12px;">
+              <span style="color: #666; font-style: italic;">“${r.text}”</span><br>
+              <strong>– ${r.name}</strong>
+            </p>
+          </div>
+        `;
+      }
+      reviewContainer.innerHTML = html;
+    }
+
+    window.addEventListener('resize', () => renderReviews(autoIndex));
+    setInterval(() => renderReviews(autoIndex++), 6000);
+    renderReviews(0);
+  </script>
+</body>
+</html>
